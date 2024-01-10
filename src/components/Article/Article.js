@@ -15,7 +15,7 @@ const Article = ({ id, title, content, author, date, initialLikes }) => {
     };
 
     const handleWriteArticle = () => {
-        navigate(`/write-article/${id}`); // Navigate to the article writing page with the current article's context
+        navigate(`/src/pages/WriteArticle/WriteArticle.js/${id}`); // Navigate to the article writing page with the current article's context
     };
 
     const handleCommentSubmit = (event) => {
