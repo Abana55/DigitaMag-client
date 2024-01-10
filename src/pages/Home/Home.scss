@@ -1,0 +1,38 @@
+.home {
+    .home__hero {
+        text-align: center;
+        padding: 40px;
+        background: #f0f0f0;
+
+        h1 {
+            font-size: 3em;
+            color: #333; 
+        }
+
+        p {
+            font-size: 1.5em;
+        }
+
+        .home__button--write {
+            padding: 10px 20px;
+            background-color: blue; 
+            color: white;
+            border: none;
+            border-radius: 0;
+            font-size: 1.2em;
+            cursor: pointer;
+
+            &:hover {
+                background-color: darkblue;
+            }
+        }
+    }
+
+    // .home__featured-articles {
+    //     // Styles for featured articles
+    // }
+
+    // .home__categories {
+    //     // Styles for categories section
+    // }
+}
