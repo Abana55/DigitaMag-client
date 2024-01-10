@@ -11,11 +11,16 @@ const Home = () => {
         navigate('/write-article'); // This is the route for the article submission form
     };
     return (
-        <div className="home retro-futuristic">
+        <div className="home">
+            <nav className="navbar">
+                {/* Navbar content */}
+            </nav>
             <section className="home__hero">
-                <h1>Welcome to Our Retro-Futuristic Magazine</h1>
-                <p>Explore the future as imagined in the past.</p>
-                <button onClick={handleWriteArticle} className="home__button--write">Write New Article</button>
+                <div className="hero-content">
+                    <h1>Welcome to Our Magazine</h1>
+                    <p>Explore the future as imagined in the past.</p>
+                    <button onClick={handleWriteArticle} className="home__button--write">Write New Article</button>
+                </div>
             </section>
 
             <section className="home__featured-articles">
@@ -28,5 +33,4 @@ const Home = () => {
         </div>
     );
 };
-
 export default Home;

@@ -1,0 +1,49 @@
+.about {
+    padding: 20px;
+
+    &__header {
+        text-align: center;
+
+        h1 {
+            font-size: 2.5em;
+            color: black;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+    }
+
+    &__founder {
+        margin-top: 40px;
+
+        h2 {
+            font-size: 2em;
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        &-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            &-image {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 3px solid black;
+            }
+
+            &-details {
+                font-size: 1.1em;
+                color: black;
+                max-width: 600px;
+            }
+        }
+    }
+
+    // Add styles for additional sections as needed
+}
