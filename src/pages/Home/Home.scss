@@ -36,3 +36,46 @@
     //     // Styles for categories section
     // }
 }
+.retro-futuristic {
+    font-family: 'Orbitron', sans-serif; // Example of a futuristic font
+
+    .home__hero {
+        background-image: url('https://via.placeholder.com/1500'); // Example placeholder
+        background-size: cover;
+        color: #fff;
+        text-shadow: 0 0 10px #000;
+        text-align: center;
+        padding: 60px 20px;
+
+        h1 {
+            font-size: 4em;
+        }
+
+        p {
+            font-size: 1.5em;
+        }
+
+        .home__button--write {
+            background-color: #ff00ff; // Neon color
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            box-shadow: 0 0 10px #ff00ff;
+            transition: background-color 0.3s, box-shadow 0.3s;
+
+            &:hover {
+                background-color: #ff66ff;
+                box-shadow: 0 0 20px #ff66ff;
+            }
+        }
+    }
+
+    // .home__featured-articles {
+    //     // Retro futuristic styles for featured articles
+    // }
+
+    // .home__categories {
+    //     // Retro futuristic styles for categories
+    // }
+}

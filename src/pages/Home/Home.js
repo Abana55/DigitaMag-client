@@ -11,10 +11,10 @@ const Home = () => {
         navigate('/write-article'); // This is the route for the article submission form
     };
     return (
-        <div className="home">
+        <div className="home retro-futuristic">
             <section className="home__hero">
-                <h1>Welcome to Our Magazine</h1>
-                <p>Explore the latest in games, movies, television, and technology.</p>
+                <h1>Welcome to Our Retro-Futuristic Magazine</h1>
+                <p>Explore the future as imagined in the past.</p>
                 <button onClick={handleWriteArticle} className="home__button--write">Write New Article</button>
             </section>
 
