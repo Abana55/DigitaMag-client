@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+
 .home {
     padding: 0%;
     .home__hero {
@@ -41,7 +44,7 @@
     font-family: 'Orbitron', sans-serif; // Example of a futuristic font
 
     .home__hero {
-        background-image: url('https://via.placeholder.com/1500'); // Example placeholder
+        background-image: url(../../assets/images/fernando-torres-Qyv-yxExIbM-unsplash.jpg);
         background-size: cover;
         color: #fff;
         text-shadow: 0 0 10px #000;

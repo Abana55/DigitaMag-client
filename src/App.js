@@ -5,6 +5,7 @@ import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import ArticlePage from './pages/ArticlePage/ArticlePage';
 import WriteArticle from './pages/WriteArticle/WriteArticle';
+import './App.css';
 
 function App() {
   return (

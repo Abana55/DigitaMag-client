@@ -1,6 +1,8 @@
 .App {
   text-align: center;
 }
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
 
 .App-logo {
   height: 40vmin;
@@ -36,12 +38,11 @@
     transform: rotate(360deg);
   }
 }
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'DM Serif Display', serif;
   margin: 0;
-  padding: 0; /* Set padding to 0 */
+  padding: 0;
   box-sizing: border-box;
 }
-
