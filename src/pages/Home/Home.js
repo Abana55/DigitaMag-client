@@ -9,6 +9,7 @@ import axios from 'axios';
 const Home = () => {
     const [articles, setArticles] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchArticles = async () => {
@@ -20,14 +21,19 @@ const Home = () => {
                 console.error('Error fetching articles:', error);
                 setIsLoading(false);
             }
-        }
-    })
+        };
 
-    const navigate = useNavigate();
+        fetchArticles();
+    }, []);
 
     const handleWriteArticle = () => {
-        navigate('/write-article'); // This is the route for the article submission form
+        navigate('/write-article');
     };
+
+    if (isLoading) {
+        return <div>Loading...</div>; // Loading state
+    }
+
     return (
         <div className="home">
             <nav className="navbar">
