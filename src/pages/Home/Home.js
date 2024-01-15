@@ -7,7 +7,15 @@ import axios from 'axios';
 
 
 const Home = () => {
-    const [articles, setArticles] = useState([])
+    const [articles, setArticles] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchArticles = async () => {
+            
+        }
+    })
+
     const navigate = useNavigate();
 
     const handleWriteArticle = () => {
