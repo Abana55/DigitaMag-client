@@ -48,11 +48,13 @@ const Home = () => {
             </section>
 
             <section className="home__featured-articles">
-                {/* Display featured articles here */}
+                <h2>Featured Articles</h2>
+                <ArticleCarousel articles={[]} />
             </section>
 
             <section className="home__categories">
-                {/* Category selection here */}
+                <h2>Categories</h2>
+                <CategoryList categories={[]} />
             </section>
         </div>
     );
