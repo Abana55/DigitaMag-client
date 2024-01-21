@@ -6,6 +6,7 @@ import About from './pages/About/About';
 import ArticlePage from './pages/ArticlePage/ArticlePage';
 import WriteArticle from './pages/WriteArticle/WriteArticle';
 import './App.css';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/write-article" element={<WriteArticle />} />
               <Route path="/articles/:id" element={<ArticlePage />} />
+              <Route path="*" component={NotFound} />
           </Routes>
       </Router>
   );
