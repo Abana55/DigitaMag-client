@@ -4,6 +4,8 @@ import "./Home.scss";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import ArticleCarousel from "../../components/ArticleCarousel/ArticleCarousel";
+import CategoryList from '../../components/CategoryList/CategoryList';
 
 const Home = () => {
   const [articles, setArticles] = useState([]);
@@ -45,15 +47,16 @@ const Home = () => {
           </button>
         </div>
       </section>
-
+      
       <section className="home__featured-articles">
         <h2>Featured Articles</h2>
-        <ArticleCarousel articles={[]} />
+        <ArticleCarousel articles={articles} /> {/* Pass fetched articles */}
       </section>
 
+      {/* Once you have category data, pass it to CategoryList */}
       <section className="home__categories">
         <h2>Categories</h2>
-        <CategoryList categories={[]} />
+        <CategoryList categories={/* your category data here */} />
       </section>
     </div>
   );
