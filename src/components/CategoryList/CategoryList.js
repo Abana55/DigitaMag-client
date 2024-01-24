@@ -1,17 +1,19 @@
 import React from 'react';
-import './CategoryList.scss'; // Assuming you have a corresponding stylesheet
+import './CategoryList.scss'; 
 
 const CategoryList = ({ categories }) => {
   return (
     <div className="category-list">
       {categories.length > 0 ? (
-        <ul>
+        <ul className="category-list__items">
           {categories.map(category => (
-            <li key={category.id}>{category.name}</li> // Adjust according to your data structure
+            <li key={category.id} className="category-list__item">
+              {category.name}
+            </li>
           ))}
         </ul>
       ) : (
-        <p>No categories found.</p>
+        <p className="category-list__no-items">No categories found.</p>
       )}
     </div>
   );

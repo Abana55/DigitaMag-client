@@ -56,7 +56,7 @@ const Home = () => {
       {/* Once you have category data, pass it to CategoryList */}
       <section className="home__categories">
         <h2>Categories</h2>
-        <CategoryList categories={/* your category data here */} />
+        <CategoryList categories={categories} />
       </section>
     </div>
   );

@@ -1,0 +1,19 @@
+
+.category-list {
+    
+  
+    &__items {
+      list-style-type: none;
+      
+    }
+  
+    &__item {
+    
+      margin-bottom: 10px;
+     
+    }
+  
+    &__no-items {    
+      color: gray;
+    }
+  }
