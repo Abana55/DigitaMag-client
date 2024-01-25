@@ -9,31 +9,42 @@ import CategoryList from '../../components/CategoryList/CategoryList';
 
 const Home = () => {
   const [articles, setArticles] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
 
+  const fetchArticles = async () => {
+    const response = await axios.get("http://localhost:5000/api/articles");
+    setArticles(response.data);
+  };
+
+  const fetchCategories = async () => {
+    const response = await axios.get("http://localhost:5000/api/categories");
+    setCategories(response.data);
+  };
+
   useEffect(() => {
-    const fetchArticles = async () => {
+    const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/articles");
-        setArticles(response.data);
-        setIsLoading(false);
-      } catch (error) {
-        console.error("Error fetching articles:", error);
+        await Promise.all([fetchArticles(), fetchCategories()]);
+      } catch (err) {
+        setError(err.message);
+      } finally {
         setIsLoading(false);
       }
     };
 
-    fetchArticles();
+    fetchData();
   }, []);
 
   const handleWriteArticle = () => {
     navigate("/write-article");
   };
 
-  if (isLoading) {
-    return <div>Loading...</div>; // Loading state
-  }
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+
 
   return (
     <div className="home">
