@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import ArticleCarousel from "../../components/ArticleCarousel/ArticleCarousel";
 import CategoryList from '../../components/CategoryList/CategoryList';
+import CategoryForm from "../../components/CategoryForm/CategoryForm";
 
 const Home = () => {
   const [articles, setArticles] = useState([]);
@@ -65,6 +66,10 @@ const Home = () => {
       </section>
 
       {/* Once you have category data, pass it to CategoryList */}
+      <section className="home__add-category">
+        <h2>Add a New Category</h2>
+        <CategoryForm />
+      </section>
       <section className="home__categories">
         <h2>Categories</h2>
         <CategoryList categories={categories} />
