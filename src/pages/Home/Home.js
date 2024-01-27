@@ -15,12 +15,12 @@ const Home = () => {
   const navigate = useNavigate();
 
   const fetchArticles = async () => {
-    const response = await axios.get("http://localhost:5000/api/articles");
+    const response = await axios.get("http://localhost:3000/api/articles");
     setArticles(response.data);
   };
 
   const fetchCategories = async () => {
-    const response = await axios.get("http://localhost:5000/api/categories");
+    const response = await axios.get("http://localhost:3000/api/categories");
     setCategories(response.data);
   };
 
