@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import "./WriteArticle.scss";
 
 const WriteArticle = () => {
@@ -6,7 +8,25 @@ const WriteArticle = () => {
   const [content, setContent] = useState("");
   const [image, setImage] = useState(null);
   const [authorName, setAuthorName] = useState("");
+  const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("");
   const currentDate = new Date().toLocaleDateString();
+  const navigate = useNavigate();
+
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await axios.get('http://localhost:3000/api/categories');
+        setCategories(response.data);
+      } catch (error) {
+        console.error('Error fetching categories:', error);
+      }
+    };
+
+    fetchCategories();
+  }, []);
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
