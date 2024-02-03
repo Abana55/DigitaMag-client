@@ -64,8 +64,6 @@ const Home = () => {
         <h2>Featured Articles</h2>
         <ArticleCarousel articles={articles} /> {/* Pass fetched articles */}
       </section>
-
-      {/* Once you have category data, pass it to CategoryList */}
       <section className="home__add-category">
         <h2>Add a New Category</h2>
         <CategoryForm />
