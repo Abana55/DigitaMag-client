@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import "./WriteArticle.scss";
 
 const WriteArticle = () => {
@@ -13,24 +13,36 @@ const WriteArticle = () => {
   const currentDate = new Date().toLocaleDateString();
   const navigate = useNavigate();
 
-
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/categories');
+        const response = await axios.get(
+          "http://localhost:3000/api/categories"
+        );
         setCategories(response.data);
       } catch (error) {
-        console.error('Error fetching categories:', error);
+        console.error("Error fetching categories:", error);
       }
     };
 
     fetchCategories();
   }, []);
 
-
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Validation and submission logic goes here
+    const articleData = {
+      title,
+      content,
+      authorName,
+      categoryId: selectedCategory,  
+    };
+  
+    try {
+      await axios.post("http://localhost:3000/api/articles", articleData);
+      navigate("/");
+    } catch (error) {
+      console.error("Error submitting article:", error);
+    }
   };
 
   const handleImageChange = (event) => {
@@ -38,7 +50,7 @@ const WriteArticle = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="article-form">
+    <div className="article-form">
       <input
         type="text"
         value={title}
@@ -67,11 +79,23 @@ const WriteArticle = () => {
         placeholder="Author Name"
         className="article-form__input--author"
       />
+      <select
+        value={selectedCategory}
+        onChange={(e) => setSelectedCategory(e.target.value)}
+        className="article-form__select--category"
+      >
+        <option value="">Select a category</option>
+        {categories.map((category) => (
+          <option key={category.id} value={category.id}>
+            {category.name}
+          </option>
+        ))}
+      </select>
       <p className="article-form__date">Posting Date: {currentDate}</p>
-      <button type="submit" className="article-form__button--submit">
+      <button onClick={handleSubmit} className="article-form__button--submit">
         Submit Article
       </button>
-    </form>
+    </div>
   );
 };
 
