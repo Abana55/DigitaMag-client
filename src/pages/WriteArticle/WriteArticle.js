@@ -6,7 +6,6 @@ import "./WriteArticle.scss";
 const WriteArticle = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const [image, setImage] = useState(null);
   const [authorName, setAuthorName] = useState("");
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -16,9 +15,7 @@ const WriteArticle = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:3000/api/categories"
-        );
+        const response = await axios.get("http://localhost:3000/api/categories");
         setCategories(response.data);
       } catch (error) {
         console.error("Error fetching categories:", error);
@@ -34,7 +31,7 @@ const WriteArticle = () => {
       title,
       content,
       authorName,
-      categoryId: selectedCategory,  
+      categoryId: selectedCategory,
     };
   
     try {
@@ -43,10 +40,6 @@ const WriteArticle = () => {
     } catch (error) {
       console.error("Error submitting article:", error);
     }
-  };
-
-  const handleImageChange = (event) => {
-    setImage(event.target.files[0]);
   };
 
   return (
@@ -64,14 +57,6 @@ const WriteArticle = () => {
         placeholder="Write your article..."
         className="article-form__textarea--content"
       />
-      <label className="article-form__label--file">
-        <input
-          type="file"
-          onChange={handleImageChange}
-          className="article-form__input--file"
-        />
-        Upload Image
-      </label>
       <input
         type="text"
         value={authorName}
@@ -92,7 +77,7 @@ const WriteArticle = () => {
         ))}
       </select>
       <p className="article-form__date">Posting Date: {currentDate}</p>
-      <button onClick={handleSubmit} className="article-form__button--submit">
+      <button type="button" onClick={handleSubmit} className="article-form__button--submit">
         Submit Article
       </button>
     </div>
