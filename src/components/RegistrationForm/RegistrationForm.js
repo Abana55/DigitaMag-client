@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './RegistrationForm.scss'; 
 
 const RegistrationForm = () => {
   const [userData, setUserData] = useState({
@@ -25,10 +26,14 @@ const RegistrationForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <section className='registration-form'>
+        
+    <form onSubmit={handleSubmit} className='registration-form__form'>
+    <h1 className='registration-form__title'>Register</h1>
       <input
         type="text"
         name="username"
+        className='registration-form__input registration-form__input--username'
         value={userData.username}
         onChange={handleChange}
         placeholder="Username"
@@ -36,6 +41,7 @@ const RegistrationForm = () => {
       <input
         type="email"
         name="email"
+        className='registration-form__input registration-form__input--email'
         value={userData.email}
         onChange={handleChange}
         placeholder="Email"
@@ -43,12 +49,14 @@ const RegistrationForm = () => {
       <input
         type="password"
         name="password"
+        className='registration-form__input registration-form__input--password'
         value={userData.password}
         onChange={handleChange}
         placeholder="Password"
       />
-      <button type="submit">Register</button>
+      <button type="submit" className='registration-form__button'>Register</button>
     </form>
+    </section>
   );
 };
 

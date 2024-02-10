@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './LoginForm.scss'; // Make sure to import the SCSS file
 
 const LoginForm = ({ setToken }) => {
   const [loginData, setLoginData] = useState({
@@ -24,12 +25,13 @@ const LoginForm = ({ setToken }) => {
   };
 
   return (
-    <section className='login'>
-        <h1>login</h1>
-    <form onSubmit={handleSubmit}>
+    <section className='login-form'>
+        <h1 className='login-form__title'>Login</h1>
+    <form onSubmit={handleSubmit} className='login-form__form'>
       <input
         type="email"
         name="email"
+        className='login-form__input login-form__input--email'
         value={loginData.email}
         onChange={handleChange}
         placeholder="Email"
@@ -37,11 +39,12 @@ const LoginForm = ({ setToken }) => {
       <input
         type="password"
         name="password"
+        className='login-form__input login-form__input--password'
         value={loginData.password}
         onChange={handleChange}
         placeholder="Password"
       />
-      <button type="submit">Login</button>
+      <button type="submit" className='login-form__button'>Login</button>
     </form>
     </section>
   );
