@@ -22,7 +22,7 @@ function App() {
               <Route path="/write-article" element={<WriteArticle />} />
               <Route path="/articles/:id" element={<ArticlePage />} />
               <Route path="/register" element={<RegistrationForm />} />
-              <Route path="/login" element={<LoginForm />} /> {/* Add this line */}
+              <Route path="/login" element={<LoginForm />} /> {/* testing testing*/}
               <Route path="*" element={<NotFound />} />
           </Routes>
         </AuthProvider>
