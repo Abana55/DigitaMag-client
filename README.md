@@ -1,72 +1,64 @@
-# Getting Started with Create React App
+# DigiMag
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+**DigiMag** is a full-stack blogging/magazine application built with React, Node.js, and MySQL. It allows users to create, edit, and manage articles with an intuitive and responsive interface.
 
-## Available Scripts
+## Features
+- User authentication and authorization
+- CRUD operations for articles
+- Rich text editor
+- Responsive design
+- SEO-friendly
 
-In the project directory, you can run:
+## Frontend Plan
 
-### `npm start`
+### Technologies
+- **React:** Used for building the user interface.
+- **React Router:** Handles routing for navigation between different pages.
+- **Axios:** For making HTTP requests to the backend API.
+- **Rich Text Editor:** A WYSIWYG editor for creating and editing articles.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Components
+1. **App Component:** The main component that includes routing setup.
+2. **Header Component:** Contains the navigation bar and links to different sections of the application.
+3. **Footer Component:** Provides the footer information and links.
+4. **Home Component:** Displays the homepage with featured articles and a brief overview of the site.
+5. **ArticleList Component:** Shows a list of all articles, possibly with pagination.
+6. **Article Component:** Displays a single article with full content.
+7. **CreateArticle Component:** Provides a form with a rich text editor for creating new articles.
+8. **EditArticle Component:** Similar to CreateArticle but pre-populated with the article's existing content for editing.
+9. **Login Component:** Provides a form for user login.
+10. **Register Component:** Provides a form for new user registration.
+11. **UserProfile Component:** Displays user-specific information and their articles.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Pages
+1. **Home Page:** Displays the latest articles, popular tags, and featured content.
+2. **Article Page:** Shows the full content of a selected article.
+3. **Create/Edit Article Page:** Contains the form for creating or editing an article.
+4. **Login Page:** Provides access to the login form.
+5. **Register Page:** Provides access to the registration form.
+6. **User Profile Page:** Displays the user’s information and their authored articles.
 
-### `npm test`
+### State Management
+- **React Context API or Redux:** To manage global state, including user authentication status and article data.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Styling
+- **CSS/SCSS:** For styling the components and ensuring a responsive design.
+- **BEM Naming Convention:** To maintain organized and maintainable styles.
 
-### `npm run build`
+## Backend Overview
+- **Node.js & Express:** For handling server-side logic and API endpoints.
+- **MySQL & Sequelize:** For database management and ORM.
+- **JWT & bcrypt:** For secure user authentication and password hashing.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
+- Access the application at `http://localhost:3000`
+- Register or log in to create and manage articles
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Used
+- **Frontend:** React, React Router, Axios
+- **Backend:** Node.js, Express, MySQL
+- **Other:** Sequelize, bcrypt, JSON Web Tokens
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# my-magazine-app
-# my-magezine-client
+## Contact
+For inquiries, contact me at anbana994@gmail.com.
